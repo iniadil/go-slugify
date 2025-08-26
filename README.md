@@ -36,6 +36,26 @@ fmt.Println(newSlug) // Output: slugify/make
         - `WithSeparator(sep string)` : set a custom separator.
         - `WithLowerCase(bool)` : set lowercase _(default true)_
 
+## Benchmark
+
+`go-slugify` has been benchmarked to demonstrate its performance.  
+On a macOS machine with an Intel i7 CPU, the results show:
+
+- Short strings: ~300 ns/op
+- Long strings: ~580 ns/op
+- Custom separator: ~320 ns/op
+- Without lowercase conversion: ~228 ns/op
+
+These results indicate that:
+
+- **Fast**: All operations complete in sub-microsecond time.
+- **Lightweight**: Minimal overhead, suitable for high-performance applications.
+- **Consistent**: Options like custom separators or disabling lowercase do not introduce significant cost.
+
+This makes `go-slugify` a reliable choice for projects that require efficient slug generation, such as REST APIs, microservices, or CLI tools.
+
+
+
 ## License
 
 See [LICENSE](LICENSE) for details.
