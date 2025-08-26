@@ -3,14 +3,17 @@ package main
 import (
 	"fmt"
 
-	go_slugify "github.com/iniadil/go-slugify/helper"
+	"github.com/iniadil/go-slugify/slugify"
 )
 
 func main() {
 	//slug, err := go_slugify.Slugify("Slugify - make your title better")
-	slug, err := go_slugify.Slugify("Slugify - make !@#$%^&*()")
+	slug, _ := slugify.Slugify("Slugify - make !@#$%^&*()")
 
-	if err == nil {
-		fmt.Println(slug)
-	}
+	fmt.Println(slug)
+	//if err == nil {
+	//}
+
+	newSlug, _ := slugify.Slugify("Slugify - make !@#$%^&*()", slugify.WithSeparator("/"))
+	fmt.Println(newSlug)
 }
