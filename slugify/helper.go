@@ -43,21 +43,21 @@ type config struct {
 	LowerCase bool
 }
 
-type options func(*config)
+type Options func(*config)
 
-func WithSeparator(sep string) options {
+func WithSeparator(sep string) Options {
 	return func(c *config) {
 		c.Separator = sep
 	}
 }
 
-func WithLowerCase(enable bool) options {
+func WithLowerCase(enable bool) Options {
 	return func(c *config) {
 		c.LowerCase = enable
 	}
 }
 
-func Slugify(s string, option ...options) (string, error) {
+func Slugify(s string, option ...Options) (string, error) {
 	if len(s) < 1 {
 		return "", errors.New("slugify must contain at least 1 character")
 	}
