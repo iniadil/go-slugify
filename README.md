@@ -58,7 +58,13 @@ This makes `go-slugify` a reliable choice for projects that require efficient sl
 
 ## License
 
-See [LICENSE](LICENSE) for details.
+This project is open-source and licensed under the [MIT License](LICENSE).  
+You are free to use, modify, and distribute it with attribution.
+
+## Contributing
+
+Contributions are welcome!  
+Feel free to open an issue or submit a pull request to improve this project.
 
 ---
 Maintained by [iniadil](https://github.com/iniadil)
