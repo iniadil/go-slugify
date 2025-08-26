@@ -82,6 +82,8 @@ func Slugify(s string, option ...options) (string, error) {
 	var betaSlug string
 	if cfg.LowerCase {
 		betaSlug = strings.ToLower(trimmed)
+	} else {
+		betaSlug = trimmed
 	}
 	// remove symbols
 	cleanedText := strings.Map(func(r rune) rune {
